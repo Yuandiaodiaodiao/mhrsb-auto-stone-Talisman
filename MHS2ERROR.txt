@@ -1,0 +1,1 @@
+loading model parameters from dir C:\Users\Yuan\AppData\Roaming\cnocr\1.2.0\densenet-lite-fc
