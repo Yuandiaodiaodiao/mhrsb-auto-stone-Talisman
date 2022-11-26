@@ -90,12 +90,16 @@ def autoNext():
         finally:
             if find==1:
                 continue
+            if i==29:
+                continue
             press_str('d')
             time.sleep(0.1)
             if i%10==9:
                 press_str('s')
                 time.sleep(0.1)
     time.sleep(0.2)
+    press_str('d')
+    press_str('s')
     press_str('s')
     press_str('s')
     press_str('s')
@@ -135,9 +139,9 @@ def allx():
 def InfinityX():
     while True:
         lian10()
-        time.sleep(0.5)
+        time.sleep(1)
         autoNext()
-        time.sleep(0.5)
+        time.sleep(1)
 if __name__ == '__main__':
     from keyboard_listener import KListener
 
