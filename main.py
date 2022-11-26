@@ -61,10 +61,16 @@ def lian10():
         lian1()
     press_str('s')
     press_str('f')
+from argsolver import blackList
 def autoNext():
     for i in range(30):
         res,skillName = readStone()
         print(res,skillName)
+        def checkInBlackList():
+            for skill in blackList:
+                if skill in "".join(skillName):
+                    return True
+            return False
         def saveRecord():
             try:
                 with open('record.txt', 'a', encoding='utf-8')as f:
@@ -78,7 +84,8 @@ def autoNext():
 
         find=0
         try:
-            if int(res[0])+int(res[1])>=5:
+
+            if int(res[0])+int(res[1])>=5 and (not checkInBlackList()):
                 press_str('f')
                 saveRecord()
                 time.sleep(0.2)
